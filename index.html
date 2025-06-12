@@ -30,7 +30,6 @@
 
     <header>
         <button id="hamburguesa" class="boton-hamburguesa" aria-label="Abrir menú de navegación">☰</button>
-        <button id="toggle-tema" class="boton-tema" aria-label="Cambiar tema de color">Cambiar tema</button>
         <h1 class="titulo">Sat Emir Nair</h1>
         <nav>
             <ul class="navigation">
@@ -122,12 +121,8 @@
         AOS.init();
     </script>
 
-    <!-- JS Tema y Hamburguesa -->
+    <!-- JS Hamburguesa -->
     <script>
-        document.getElementById('toggle-tema').addEventListener('click', () => {
-            document.body.classList.toggle('tema-claro');
-        });
-
         document.getElementById('hamburguesa').addEventListener('click', () => {
             document.querySelector('.navigation').classList.toggle('activa');
         });
