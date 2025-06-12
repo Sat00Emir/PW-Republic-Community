@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-language" content="es">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Portafolio web de Sat Emir Nair, especializado en desarrollo y programación web.">
+    <meta name="keywords" content="portafolio, desarrollador web, programador, proyectos, contacto">
+    <meta name="author" content="Sat Emir Nair">
+
+    <!-- Favicon y metadatos sociales -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="Portafolio de Sat Emir Nair">
+    <meta property="og:description" content="Desarrollador Web & Programador. Soluciones creativas y eficientes.">
+    <meta property="og:image" content="https://tuweb.com/img/og-preview.jpg">
+    <meta property="og:type" content="website">
+
+    <title>Portafolio Web - Sat Emir Nair</title>
+
+    <!-- Fuentes y librerías -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="./Css/Style.css">
+</head>
+<body>
+
+    <header>
+        <button id="hamburguesa" class="boton-hamburguesa" aria-label="Abrir menú de navegación">☰</button>
+        <button id="toggle-tema" class="boton-tema" aria-label="Cambiar tema de color">Cambiar tema</button>
+        <h1 class="titulo">Sat Emir Nair</h1>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#sobremi" class="active">Sobre Mí</a></li>
+                <li><a href="#herramientas">Lenguajes y Herramientas</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contáctame</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobremi" class="seccion" data-aos="fade-up">
+            <article class="bloque-contenido">
+                <h2 class="subtitulo-seccion">Sobre Mí</h2>
+                <p>
+                    Me especializo en el desarrollo de soluciones web creativas, eficientes y adaptadas a las necesidades específicas de cada proyecto. 
+                    Mi enfoque combina diseño intuitivo con funcionalidades robustas para ofrecer experiencias digitales que realmente conecten con los usuarios.<br><br>
+                    La programación no solo es mi profesión, sino también mi pasión. Disfruto constantemente aprendiendo nuevas tecnologías y perfeccionando mis habilidades para estar siempre a la vanguardia. 
+                    Me motiva transformar ideas en productos funcionales que aporten valor y faciliten la vida de las personas.
+                </p>
+            </article>
+        </section>
+
+        <section id="herramientas" class="seccion" data-aos="fade-left">
+            <article class="bloque-contenido">
+                <h2 class="subtitulo-seccion">Lenguajes y Herramientas</h2>
+                <ul>
+                    <li><strong>Lenguajes:</strong> HTML, CSS, JavaScript, Lua, Python, Java.</li>
+                    <li><strong>Frameworks y Librerías:</strong> AOS, Bootstrap, TailwindCSS.</li>
+                    <li><strong>Herramientas:</strong> Git, GitHub, Visual Studio Code, Figma.</li>
+                    <li><strong>Otros:</strong> PSeInt, diseño responsive, control de versiones.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="experiencia" class="seccion" data-aos="fade-right">
+            <article class="bloque-contenido">
+                <h2 class="subtitulo-seccion">Experiencia</h2>
+                <h3>Programador en servidor de Garry's Mod</h3>
+                <p>
+                    Participé en el desarrollo y mantenimiento de scripts personalizados en Lua para un servidor comunitario de Garry's Mod, mejorando la jugabilidad y experiencia de los usuarios.<br><br>
+                    Responsabilidades: creación de mods, depuración de código, integración de nuevas funcionalidades y colaboración con el equipo para solucionar problemas técnicos.
+                </p>
+            </article>
+        </section>
+
+        <section id="proyectos" class="seccion" data-aos="zoom-in">
+            <article class="bloque-contenido">
+                <h2 class="subtitulo-seccion">Proyectos</h2>
+                <p>
+                    He desarrollado proyectos personales y académicos, incluyendo páginas web, sistemas de gestión y juegos en entornos como PSeInt, Python, JavaScript, Java, entre otros. 
+                    Pronto incluiré ejemplos interactivos.
+                </p>
+                <!-- Aquí podrías agregar tarjetas con tus proyectos usando divs con imágenes y botones "Ver más" -->
+            </article>
+        </section>
+
+        <section id="contacto" class="seccion" data-aos="fade-up">
+            <article class="bloque-contenido">
+                <h2 class="subtitulo-seccion">Contáctame</h2>
+                <p>¿Te interesa trabajar conmigo o tenés alguna consulta?</p>
+
+                <h3><i class="fas fa-envelope"></i> Correo Electrónico:</h3>
+                <p><a href="mailto:emirsat54@gmail.com">emirsat54@gmail.com</a></p>
+
+                <h3><i class="fas fa-phone"></i> Teléfono:</h3>
+                <p><a href="tel:+542604514527">+54 2604514527</a></p>
+
+                <h3><i class="fab fa-instagram"></i> Instagram:</h3>
+                <p><a href="https://instagram.com/sat__emir" target="_blank">@sat__emir</a></p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Sat Emir Nair. Técnico Universitario en Programación.</p>
+    </footer>
+
+    <!-- JS AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- JS Tema y Hamburguesa -->
+    <script>
+        document.getElementById('toggle-tema').addEventListener('click', () => {
+            document.body.classList.toggle('tema-claro');
+        });
+
+        document.getElementById('hamburguesa').addEventListener('click', () => {
+            document.querySelector('.navigation').classList.toggle('activa');
+        });
+    </script>
+</body>
+</html>
