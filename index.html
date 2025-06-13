@@ -3,64 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de Emir Sat, programador web y estudiante de programación.">
+  <meta name="author" content="Emir Sat">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet"> 
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <title>Portafolio Web</title>
+  <script>
+    // Modo oscuro/claro
+    function toggleTheme() {
+      document.body.classList.toggle("dark-theme");
+      localStorage.setItem("theme", document.body.classList.contains("dark-theme") ? "dark" : "light");
+    }
+
+    // Cargar tema guardado
+    window.addEventListener("DOMContentLoaded", () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-theme");
+      }
+    });
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: background 0.3s;
+    }
+    .theme-toggle:hover {
+      background: #333;
+    }
+    .dark-theme {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+    .dark-theme .tarjeta {
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+    }
+    .dark-theme .btn-descarga {
+      background: #f0f0f0;
+      color: #000;
+    }
+    .dark-theme .btn-descarga:hover {
+      background: #ccc;
+    }
+  </style>
 </head>
 <body>
 
+<button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+
 <!-- Presentación -->
-<section class="perfil">
+<section class="perfil" id="inicio">
   <div class="info">
     <h1>Sat Emir Nair</h1>
-    <h2>Estudiante Tecnicatura Universitaria en Programación</h2>
+    <h2>Estudiante de la Tecnicatura Universitaria en Programación</h2>
     <p>
      ¡Hola! Soy Emir Sat, un programador apasionado por la tecnología, el diseño web y la creación de experiencias digitales intuitivas y atractivas. Desde que comencé en el mundo del desarrollo, me he enfocado en construir soluciones limpias, funcionales y con una fuerte identidad visual.
     </p>
     <div class="redes">
-      <a href="https://www.linkedin.com/in/emir-sat-0a428a363/" target="_blank">
+      <a href="https://www.linkedin.com/in/emir-sat-0a428a363/" target="_blank" aria-label="LinkedIn">
         <i class="fab fa-linkedin fa-2x"></i>
       </a>
-      <a href="https://github.com/gordonfreeman2003" target="_blank">
+      <a href="https://github.com/gordonfreeman2003" target="_blank" aria-label="GitHub">
         <i class="fab fa-github fa-2x"></i>
       </a>
     </div>
+    <a href="./cv/Emir-Sat-CV.pdf" download class="btn-descarga">Descargar CV</a>
   </div>
   <div class="foto">
-    <img src="./icons/foto.png" alt="Foto de perfil">
+    <img src="./icons/foto.png" alt="Foto de perfil de Emir Sat">
   </div>
-<div class="social-icons">
-  <a href="https://www.linkedin.com/in/emir-sat-0a428a363/" target="_blank">
-    <img src="./icons/linked-in.png" alt="LinkedIn">
-  </a>
-  <a href="https://github.com/gordonfreeman2003" target="_blank">
-    <img src="./icons/gitithub.png" alt="GitHub">
-  </a>
-</div>
 </section>
 
-
-  <!-- Tecnologías -->
-  <main>
-    <div class="titulo">
+<!-- Tecnologías -->
+<main>
+  <section class="tecnologias" id="tecnologias">
+    <header class="titulo">
       <h2>Tecnologías</h2>
       <p>Lenguajes y Herramientas utilizadas</p>
-    </div>
-
+    </header>
     <div class="container">
-      <div class="tarjeta"><img src="./icons/pseInt.png"><p>PseInt</p></div>
-      <div class="tarjeta"><img src="./icons/java.png"><p>Java</p></div>
-      <div class="tarjeta"><img src="./icons/python.png"><p>Python</p></div>
-      <div class="tarjeta"><img src="./icons/css.png"><p>CSS</p></div>
-      <div class="tarjeta"><img src="./icons/html.png"><p>HTML</p></div>
-      <div class="tarjeta"><img src="./icons/js.png"><p>JavaScript</p></div>
-      <div class="tarjeta"><img src="./icons/git.png"><p>Git</p></div>
-      <div class="tarjeta"><img src="./icons/ai.png"><p>AI</p></div>
+      <div class="tarjeta"><img src="./icons/pseInt.png" alt="PseInt"><p>PseInt</p></div>
+      <div class="tarjeta"><img src="./icons/java.png" alt="Java"><p>Java</p></div>
+      <div class="tarjeta"><img src="./icons/python.png" alt="Python"><p>Python</p></div>
+      <div class="tarjeta"><img src="./icons/css.png" alt="CSS"><p>CSS</p></div>
+      <div class="tarjeta"><img src="./icons/html.png" alt="HTML"><p>HTML</p></div>
+      <div class="tarjeta"><img src="./icons/js.png" alt="JavaScript"><p>JavaScript</p></div>
+      <div class="tarjeta"><img src="./icons/git.png" alt="Git"><p>Git</p></div>
+      <div class="tarjeta"><img src="./icons/ai.png" alt="IA"><p>AI</p></div>
     </div>
-  </main>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/in/emir-sat-0a428a363/" target="_blank">
+      <img src="./icons/linked-in.png" alt="LinkedIn">
+    </a>
+    <a href="https://github.com/gordonfreeman2003" target="_blank">
+      <img src="./icons/gitithub.png" alt="GitHub">
+    </a>
+  </div>
+  <p style="text-align:center; margin-top: 10px;">&copy; Tecnico Universitario en Programación.</p>
+</footer>
 
 </body>
 </html>
