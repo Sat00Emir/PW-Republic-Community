@@ -1,4 +1,27 @@
-/* CSS mejorado */
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --text-muted: #555555;
+  --accent: #000000;
+  --accent-hover: #333333;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --btn-bg: #000000;
+  --btn-text: #ffffff;
+}
+
+.dark-theme {
+  --bg: #121212;
+  --text: #f0f0f0;
+  --text-muted: #cccccc;
+  --accent: #f0f0f0;
+  --accent-hover: #cccccc;
+  --card-bg: #1e1e1e;
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  --btn-bg: #f0f0f0;
+  --btn-text: #000000;
+}
+
 * {
   font-family: "Oswald", sans-serif;
   margin: 0;
@@ -7,9 +30,28 @@
 }
 
 body {
-  background: #fff;
-  color: #000;
+  background-color: var(--bg);
+  color: var(--text);
   padding: 30px;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--accent);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--accent-hover);
 }
 
 .perfil {
@@ -18,10 +60,10 @@ body {
   justify-content: space-between;
   align-items: center;
   border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px var(--card-shadow);
   padding: 30px;
   margin-bottom: 40px;
-  background: #fff;
+  background: var(--card-bg);
 }
 
 .info {
@@ -38,14 +80,14 @@ body {
 }
 
 .info p {
-  color: #7a7a7a;
+  color: var(--text-muted);
   font-size: 1rem;
   margin: 10px 0;
 }
 
 .redes a {
   margin-right: 15px;
-  color: #000;
+  color: var(--text);
   text-decoration: none;
   transition: transform 0.2s ease;
 }
@@ -58,15 +100,15 @@ body {
   display: inline-block;
   margin-top: 15px;
   padding: 10px 20px;
-  background: #000;
-  color: #fff;
+  background: var(--btn-bg);
+  color: var(--btn-text);
   border-radius: 8px;
   text-decoration: none;
   transition: background 0.3s;
 }
 
 .btn-descarga:hover {
-  background: #333;
+  background: var(--accent-hover);
 }
 
 .foto img {
@@ -87,7 +129,7 @@ body {
 
 .titulo p {
   font-size: 1rem;
-  color: gray;
+  color: var(--text-muted);
 }
 
 .container {
@@ -101,9 +143,9 @@ body {
   width: 100%;
   max-width: 300px;
   height: 150px;
-  background-color: #fff;
+  background-color: var(--card-bg);
   border-radius: 12px;
-  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 4px 4px 6px var(--card-shadow);
   display: flex;
   flex-direction: column;
   align-items: center;
