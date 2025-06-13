@@ -8,6 +8,7 @@
   --card-shadow: rgba(0, 0, 0, 0.1);
   --btn-bg: #000000;
   --btn-text: #ffffff;
+  --transition: 0.3s ease;
 }
 
 .dark-theme {
@@ -22,17 +23,19 @@
   --btn-text: #000000;
 }
 
-* {
-  font-family: "Oswald", sans-serif;
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
+  font-family: "Oswald", sans-serif;
   background-color: var(--bg);
   color: var(--text);
   padding: 30px;
+  line-height: 1.6;
+  transition: background-color var(--transition), color var(--transition);
 }
 
 .theme-toggle {
@@ -47,11 +50,13 @@ body {
   height: 40px;
   cursor: pointer;
   font-size: 1.2rem;
-  transition: background 0.3s ease;
+  transition: background var(--transition), transform var(--transition);
+  z-index: 1000;
 }
 
 .theme-toggle:hover {
   background: var(--accent-hover);
+  transform: rotate(20deg);
 }
 
 .perfil {
@@ -59,24 +64,27 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
   border-radius: 20px;
   box-shadow: 0 4px 10px var(--card-shadow);
   padding: 30px;
   margin-bottom: 40px;
   background: var(--card-bg);
+  transition: background var(--transition), box-shadow var(--transition);
 }
 
 .info {
-  max-width: 70%;
+  flex: 1 1 60%;
 }
 
 .info h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 .info h2 {
   font-weight: bold;
   margin: 10px 0;
+  font-size: 1.2rem;
 }
 
 .info p {
@@ -89,11 +97,12 @@ body {
   margin-right: 15px;
   color: var(--text);
   text-decoration: none;
-  transition: transform 0.2s ease;
+  transition: transform var(--transition), color var(--transition);
 }
 
 .redes a:hover {
   transform: scale(1.2);
+  color: var(--accent-hover);
 }
 
 .btn-descarga {
@@ -102,20 +111,24 @@ body {
   padding: 10px 20px;
   background: var(--btn-bg);
   color: var(--btn-text);
+  border: none;
   border-radius: 8px;
   text-decoration: none;
-  transition: background 0.3s;
+  font-weight: bold;
+  transition: background var(--transition), transform var(--transition);
 }
 
 .btn-descarga:hover {
   background: var(--accent-hover);
+  transform: scale(1.05);
 }
 
 .foto img {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
+  box-shadow: 0 4px 8px var(--card-shadow);
 }
 
 .titulo {
@@ -134,7 +147,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
   justify-items: center;
 }
@@ -150,7 +163,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform var(--transition), box-shadow var(--transition);
   text-align: center;
 }
 
@@ -162,7 +175,12 @@ body {
 .tarjeta img {
   width: 60px;
   height: 60px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
+}
+
+.tarjeta p {
+  font-weight: bold;
+  color: var(--text);
 }
 
 .social-icons {
@@ -175,24 +193,36 @@ body {
 .social-icons img {
   width: 40px;
   height: 40px;
-  transition: transform 0.3s ease;
+  transition: transform var(--transition);
 }
 
 .social-icons img:hover {
   transform: scale(1.1);
 }
 
+footer p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .perfil {
     flex-direction: column;
     text-align: center;
+    gap: 20px;
   }
 
   .info {
-    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .foto img {
+    margin: 0 auto;
   }
 
   body {
-    padding: 15px;
+    padding: 20px;
   }
 }
