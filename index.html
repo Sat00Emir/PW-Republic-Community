@@ -5,38 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portafolio de Emir Sat, programador web y estudiante de programación." />
   <meta name="author" content="Emir Sat" />
-  <link rel="stylesheet" href="style.css"/>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
   <link rel="icon" href="./icons/favicon.png" type="image/png" />
+
+  <link rel="stylesheet" href="style.css" />
+
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
-  <title>Portafolio Web - Emir Sat</title>
 
-  <!-- Script para tema claro/oscuro -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme === "dark") {
-        document.documentElement.classList.add("dark-theme");
-      }
-    });
-
-    function toggleTheme() {
-      document.documentElement.classList.toggle("dark-theme");
-      const newTheme = document.documentElement.classList.contains("dark-theme") ? "dark" : "light";
-      localStorage.setItem("theme", newTheme);
-    }
-  </script>
+  <title>Portafolio de Sat Emir Nair - Programador Web</title>
 </head>
 
 <body>
   <!-- Botón para cambiar el tema -->
-  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar entre tema claro y oscuro" title="Cambiar tema">🌓</button>
+  <button class="theme-toggle" aria-label="Cambiar entre tema claro y oscuro" aria-pressed="false" title="Cambiar tema">
+    <span class="toggle-label">🌙 Modo Oscuro</span>
+  </button>
 
   <!-- Presentación -->
-  <section class="perfil" id="inicio">
-    <div class="info">
+  <section class="perfil" id="inicio" aria-label="Presentación">
+    <article class="info">
       <h1>Sat Emir Nair</h1>
       <h2>Estudiante de la Tecnicatura Universitaria en Programación</h2>
       <p>
@@ -50,44 +40,95 @@
           <i class="fab fa-github fa-2x"></i>
         </a>
       </div>
-      <a href="./cv/Emir-Sat-CV.pdf" download class="btn-descarga">Descargar CV</a>
-    </div>
+      <a href="./cv/Emir-Sat-CV.pdf" download class="btn-descarga" role="button" aria-label="Descargar CV de Emir Sat">
+        Descargar CV
+      </a>
+    </article>
     <div class="foto">
-      <img src="./icons/foto.png" alt="Foto de perfil de Emir Sat" />
+      <img src="./icons/foto.png" alt="Foto de perfil de Emir Sat" loading="lazy" />
     </div>
   </section>
 
   <!-- Tecnologías -->
-  <main>
+  <main id="main" role="main">
     <section class="tecnologias" id="tecnologias">
       <header class="titulo">
         <h2>Tecnologías</h2>
         <p>Lenguajes y herramientas utilizadas</p>
       </header>
-      <div class="container">
-        <div class="tarjeta"><img src="./icons/pseInt.png" alt="Logo de PseInt" /><p>PseInt</p></div>
-        <div class="tarjeta"><img src="./icons/java.png" alt="Logo de Java" /><p>Java</p></div>
-        <div class="tarjeta"><img src="./icons/python.png" alt="Logo de Python" /><p>Python</p></div>
-        <div class="tarjeta"><img src="./icons/css.png" alt="Logo de CSS" /><p>CSS</p></div>
-        <div class="tarjeta"><img src="./icons/html.png" alt="Logo de HTML" /><p>HTML</p></div>
-        <div class="tarjeta"><img src="./icons/js.png" alt="Logo de JavaScript" /><p>JavaScript</p></div>
-        <div class="tarjeta"><img src="./icons/git.png" alt="Logo de Git" /><p>Git</p></div>
-        <div class="tarjeta"><img src="./icons/ai.png" alt="Logo de Inteligencia Artificial" /><p>AI</p></div>
+      <div class="container" role="list" aria-label="Lista de tecnologías">
+        <div class="tarjeta" role="listitem" tabindex="0" title="PseInt - Pseudocódigo para aprender algoritmos">
+          <img src="./icons/pseInt.png" alt="Logo de PseInt" loading="lazy" />
+          <p>PseInt</p>
+        </div>
+        <div class="tarjeta" role="listitem" tabindex="0" title="Java - Lenguaje de programación orientado a objetos">
+          <img src="./icons/java.png" alt="Logo de Java" loading="lazy" />
+          <p>Java</p>
+        </div>
+        <div class="tarjeta" role="listitem" tabindex="0" title="Python - Lenguaje de programación versátil">
+          <img src="./icons/python.png" alt="Logo de Python" loading="lazy" />
+          <p>Python</p>
+        </div>
+        <div class="tarjeta" role="listitem" tabindex="0" title="CSS - Hojas de estilo en cascada">
+          <img src="./icons/css.png" alt="Logo de CSS" loading="lazy" />
+          <p>CSS</p>
+        </div>
+        <div class="tarjeta" role="listitem" tabindex="0" title="HTML - Lenguaje de marcado de hipertexto">
+          <img src="./icons/html.png" alt="Logo de HTML" loading="lazy" />
+          <p>HTML</p>
+        </div>
+        <div class="tarjeta" role="listitem" tabindex="0" title="JavaScript - Lenguaje de programación para web">
+          <img src="./icons/js.png" alt="Logo de JavaScript" loading="lazy" />
+          <p>JavaScript</p>
+        </div>
+        <div class="tarjeta" role="listitem" tabindex="0" title="Git - Control de versiones">
+          <img src="./icons/git.png" alt="Logo de Git" loading="lazy" />
+          <p>Git</p>
+        </div>
+        <div class="tarjeta" role="listitem" tabindex="0" title="AI - Inteligencia Artificial">
+          <img src="./icons/ai.png" alt="Logo de Inteligencia Artificial" loading="lazy" />
+          <p>AI</p>
+        </div>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
   <footer>
-    <div class="social-icons">
+    <nav class="social-icons" aria-label="Redes sociales">
       <a href="https://www.linkedin.com/in/emir-sat-0a428a363/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <img src="./icons/linked-in.png" alt="LinkedIn" />
+        <img src="./icons/linked-in.png" alt="LinkedIn" loading="lazy" />
       </a>
       <a href="https://github.com/gordonfreeman2003" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <img src="./icons/gitithub.png" alt="GitHub" />
+        <img src="./icons/gitithub.png" alt="GitHub" loading="lazy" />
       </a>
-    </div>
-    <p style="text-align: center; margin-top: 10px;">&copy; Emir Sat - Técnico Universitario en Programación.</p>
+    </nav>
+    <p>&copy; Emir Sat - Técnico Universitario en Programación.</p>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const btn = document.querySelector(".theme-toggle");
+      const label = btn.querySelector(".toggle-label");
+      const savedTheme = localStorage.getItem("theme");
+
+      if (savedTheme === "dark") {
+        document.documentElement.classList.add("dark-theme");
+        btn.setAttribute("aria-pressed", "true");
+        label.textContent = "🌞 Modo Claro";
+      } else {
+        btn.setAttribute("aria-pressed", "false");
+        label.textContent = "🌙 Modo Oscuro";
+      }
+
+      btn.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark-theme");
+        const isDark = document.documentElement.classList.contains("dark-theme");
+        btn.setAttribute("aria-pressed", isDark ? "true" : "false");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+        label.textContent = isDark ? "🌞 Modo Claro" : "🌙 Modo Oscuro";
+      });
+    });
+  </script>
 </body>
 </html>

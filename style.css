@@ -9,6 +9,11 @@
   --btn-bg: #000000;
   --btn-text: #ffffff;
   --transition: 0.3s ease;
+
+  --spacing-small: 10px;
+  --spacing-medium: 20px;
+  --spacing-large: 30px;
+  --font-family: "Oswald", sans-serif;
 }
 
 .dark-theme {
@@ -23,40 +28,53 @@
   --btn-text: #000000;
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
 body {
-  font-family: "Oswald", sans-serif;
+  font-family: var(--font-family);
   background-color: var(--bg);
   color: var(--text);
-  padding: 30px;
+  padding: var(--spacing-large);
   line-height: 1.6;
   transition: background-color var(--transition), color var(--transition);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.05);
 }
 
 .theme-toggle {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: var(--spacing-large);
+  right: var(--spacing-large);
   background: var(--accent);
   color: var(--btn-text);
   border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  border-radius: 20px;
+  padding: 8px 12px;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   transition: background var(--transition), transform var(--transition);
   z-index: 1000;
 }
 
-.theme-toggle:hover {
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
   background: var(--accent-hover);
-  transform: rotate(20deg);
+  transform: scale(1.05);
+  outline: none;
+  box-shadow: 0 0 4px var(--accent-hover);
+}
+
+.theme-toggle .toggle-label {
+  font-size: 0.8rem;
+  white-space: nowrap;
 }
 
 .perfil {
@@ -64,11 +82,11 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  gap: var(--spacing-large);
   border-radius: 20px;
   box-shadow: 0 4px 10px var(--card-shadow);
-  padding: 30px;
-  margin-bottom: 40px;
+  padding: var(--spacing-large);
+  margin-bottom: var(--spacing-large);
   background: var(--card-bg);
   transition: background var(--transition), box-shadow var(--transition);
 }
@@ -83,31 +101,33 @@ body {
 
 .info h2 {
   font-weight: bold;
-  margin: 10px 0;
+  margin: var(--spacing-small) 0;
   font-size: 1.2rem;
 }
 
 .info p {
   color: var(--text-muted);
   font-size: 1rem;
-  margin: 10px 0;
+  margin: var(--spacing-small) 0;
 }
 
 .redes a {
-  margin-right: 15px;
+  margin-right: var(--spacing-medium);
   color: var(--text);
   text-decoration: none;
   transition: transform var(--transition), color var(--transition);
 }
 
-.redes a:hover {
+.redes a:hover,
+.redes a:focus-visible {
   transform: scale(1.2);
   color: var(--accent-hover);
+  outline: none;
 }
 
 .btn-descarga {
   display: inline-block;
-  margin-top: 15px;
+  margin-top: var(--spacing-medium);
   padding: 10px 20px;
   background: var(--btn-bg);
   color: var(--btn-text);
@@ -116,11 +136,14 @@ body {
   text-decoration: none;
   font-weight: bold;
   transition: background var(--transition), transform var(--transition);
+  cursor: pointer;
 }
 
-.btn-descarga:hover {
+.btn-descarga:hover,
+.btn-descarga:focus-visible {
   background: var(--accent-hover);
   transform: scale(1.05);
+  outline: none;
 }
 
 .foto img {
@@ -133,7 +156,7 @@ body {
 
 .titulo {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: var(--spacing-large);
 }
 
 .titulo h2 {
@@ -147,8 +170,8 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-medium);
   justify-items: center;
 }
 
@@ -165,17 +188,20 @@ body {
   justify-content: center;
   transition: transform var(--transition), box-shadow var(--transition);
   text-align: center;
+  cursor: default;
 }
 
-.tarjeta:hover {
+.tarjeta:hover,
+.tarjeta:focus-visible {
   transform: scale(1.05);
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+  outline: none;
 }
 
 .tarjeta img {
   width: 60px;
   height: 60px;
-  margin-bottom: 10px;
+  margin-bottom: var(--spacing-small);
 }
 
 .tarjeta p {
@@ -186,8 +212,8 @@ body {
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-medium);
 }
 
 .social-icons img {
@@ -196,14 +222,16 @@ body {
   transition: transform var(--transition);
 }
 
-.social-icons img:hover {
+.social-icons img:hover,
+.social-icons img:focus-visible {
   transform: scale(1.1);
+  outline: none;
 }
 
 footer p {
   color: var(--text-muted);
   font-size: 0.9rem;
-  margin-top: 10px;
+  margin-top: var(--spacing-small);
   text-align: center;
 }
 
@@ -211,7 +239,7 @@ footer p {
   .perfil {
     flex-direction: column;
     text-align: center;
-    gap: 20px;
+    gap: var(--spacing-medium);
   }
 
   .info {
@@ -223,6 +251,6 @@ footer p {
   }
 
   body {
-    padding: 20px;
+    padding: var(--spacing-medium);
   }
 }
