@@ -5,27 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portafolio de Emir Sat, programador web y estudiante de programación." />
   <meta name="author" content="Emir Sat" />
+  <meta name="keywords" content="Emir Sat, programador web, portfolio, programador, JavaScript, HTML, CSS, Python, Java" />
+  
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sat Emir Nair",
+    "url": "https://tu-sitio-web.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/emir-sat-0a428a363/",
+      "https://github.com/gordonfreeman2003"
+    ],
+    "jobTitle": "Programador Web Junior",
+    "description": "Programador apasionado por la tecnología y desarrollo web."
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
   <link rel="icon" href="./icons/favicon.png" type="image/png" />
+
   <link rel="stylesheet" href="style.css" />
+
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
-  <title>Portafolio de Sat Emir Nair - Programador Web</title>
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <title>Programador Web</title>
 </head>
 
 <body>
-  <!-- Botón cambiar idioma -->
-  <button id="toggleLang" aria-label="Cambiar idioma">🌐 EN</button>
-
   <!-- Botón volver arriba -->
-  <button id="backToTop" title="Volver arriba" aria-label="Volver al inicio">↑</button>
+  <button id="scrollToTop" title="Volver arriba" aria-label="Volver arriba" aria-live="polite" aria-pressed="false">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Botón cambio de idioma -->
+  <button id="toggle-language" title="Cambiar idioma" aria-label="Cambiar idioma" aria-live="polite" aria-pressed="false">
+    🌐 EN
+  </button>
 
   <!-- Presentación -->
-  <section class="perfil" id="inicio" aria-label="Presentación">
+  <section class="perfil" id="inicio" aria-label="Presentación" data-aos="fade-up">
     <article class="info">
       <h1>Sat Emir Nair</h1>
-      <h2 id="subtitulo">Estudiante de la Tecnicatura Universitaria en Programación</h2>
+      <h2>Estudiante de la Tecnicatura Universitaria en Programación</h2>
       <p>
         ¡Hola! Soy Emir Sat, un programador apasionado por la tecnología, el diseño web y la creación de experiencias digitales intuitivas y atractivas. Desde que comencé en el mundo del desarrollo, me he enfocado en construir soluciones limpias, funcionales y con una fuerte identidad visual.
       </p>
@@ -37,10 +64,9 @@
           <i class="fab fa-github fa-2x"></i>
         </a>
       </div>
-      <div style="margin-top: 15px;">
-        <a href="./cv/Emir-Sat-CV.pdf" download class="btn-descarga" role="button" aria-label="Descargar CV de Emir Sat">Descargar CV</a>
-        <a href="mailto:emir.tuprogramador@gmail.com" class="btn-descarga" aria-label="Contactar por correo">Contacto</a>
-      </div>
+      <a href="./cv/Emir-Sat-CV.pdf" download class="btn-descarga" role="button" aria-label="Descargar CV de Emir Sat">
+        Descargar CV
+      </a>
     </article>
     <div class="foto">
       <img src="./icons/foto.png" alt="Foto de perfil de Emir Sat" loading="lazy" />
@@ -49,10 +75,10 @@
 
   <!-- Tecnologías -->
   <main id="main" role="main">
-    <section class="tecnologias" id="tecnologias">
+    <section class="tecnologias" id="tecnologias" aria-label="Tecnologías" data-aos="fade-up">
       <header class="titulo">
-        <h2 id="tituloTec">Tecnologías</h2>
-        <p id="subtituloTec">Lenguajes y herramientas utilizadas</p>
+        <h2>Tecnologías</h2>
+        <p>Lenguajes y herramientas utilizadas</p>
       </header>
       <div class="container" role="list" aria-label="Lista de tecnologías">
         <div class="tarjeta" role="listitem" tabindex="0" title="PseInt - Pseudocódigo para aprender algoritmos">
@@ -89,6 +115,41 @@
         </div>
       </div>
     </section>
+
+    <!-- Proyectos Próximamente -->
+    <section class="proximamente" id="proximamente" aria-label="Próximamente proyectos" data-aos="fade-up">
+      <header class="titulo">
+        <h2>Proyectos</h2>
+        <p>¡Estoy trabajando en nuevos proyectos! Pronto los podrás ver aquí.</p>
+      </header>
+      <div class="container">
+        <p style="text-align:center; font-style: italic; color: var(--text-muted);">Próximamente...</p>
+      </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section class="contacto" id="contacto" aria-label="Contacto" data-aos="fade-up">
+      <header class="titulo">
+        <h2>Contacto</h2>
+        <p>¿Te gustó lo que viste? Hablemos. Estoy a un mensaje de distancia.</p>
+      </header>
+      <form class="formulario" id="contactForm" novalidate>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required aria-required="true" aria-describedby="nombre-error" />
+        <span id="nombre-error" class="error-message" aria-live="polite"></span>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-error" />
+        <span id="email-error" class="error-message" aria-live="polite"></span>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required aria-required="true" aria-describedby="mensaje-error"></textarea>
+        <span id="mensaje-error" class="error-message" aria-live="polite"></span>
+
+        <button type="submit" class="btn-descarga">Enviar mensaje</button>
+        <div id="form-status" role="alert" aria-live="polite"></div>
+      </form>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -101,31 +162,11 @@
         <img src="./icons/gitithub.png" alt="GitHub" loading="lazy" />
       </a>
     </nav>
-    <p>&copy; 2025 Técnico Universitario en Programación.</p>
+    <p>&copy; 2025 - Programador Junior.</p>
   </footer>
 
-  <!-- Scripts -->
-  <script>
-    // Volver arriba
-    const backToTopBtn = document.getElementById("backToTop");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) backToTopBtn.classList.add("show");
-      else backToTopBtn.classList.remove("show");
-    });
-    backToTopBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-
-    // Cambiar idioma
-    const langBtn = document.getElementById("toggleLang");
-    let isSpanish = true;
-    langBtn.addEventListener("click", () => {
-      document.getElementById("tituloTec").textContent = isSpanish ? "Technologies" : "Tecnologías";
-      document.getElementById("subtituloTec").textContent = isSpanish ? "Languages and tools used" : "Lenguajes y herramientas utilizadas";
-      document.getElementById("subtitulo").textContent = isSpanish ? "Programming Technician Student" : "Estudiante de la Tecnicatura Universitaria en Programación";
-      langBtn.textContent = isSpanish ? "🌐 ES" : "🌐 EN";
-      isSpanish = !isSpanish;
-    });
-  </script>
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
