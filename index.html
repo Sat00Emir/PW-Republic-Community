@@ -3,170 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portafolio de Emir Sat, programador web y estudiante de programación." />
-  <meta name="author" content="Emir Sat" />
-  <meta name="keywords" content="Emir Sat, programador web, portfolio, programador, JavaScript, HTML, CSS, Python, Java" />
-  
-  <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Sat Emir Nair",
-    "url": "https://tu-sitio-web.com",
-    "sameAs": [
-      "https://www.linkedin.com/in/emir-sat-0a428a363/",
-      "https://github.com/gordonfreeman2003"
-    ],
-    "jobTitle": "Programador Web Junior",
-    "description": "Programador apasionado por la tecnología y desarrollo web."
-  }
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
-  <link rel="icon" href="./icons/favicon.png" type="image/png" />
-
-  <link rel="stylesheet" href="style.css" />
-
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
-  <!-- AOS Animation CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <title>Programador Web</title>
+  <title>Republic Community</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
+<body class="bg-gray-900 text-white font-sans">
 
-<body>
-  <!-- Botón volver arriba -->
-  <button id="scrollToTop" title="Volver arriba" aria-label="Volver arriba" aria-live="polite" aria-pressed="false">
-    <i class="fas fa-arrow-up" aria-hidden="true"></i>
-  </button>
-
-  <!-- Botón cambio de idioma -->
-  <button id="toggle-language" title="Cambiar idioma" aria-label="Cambiar idioma" aria-live="polite" aria-pressed="false">
-    🌐 EN
-  </button>
-
-  <!-- Presentación -->
-  <section class="perfil" id="inicio" aria-label="Presentación" data-aos="fade-up">
-    <article class="info">
-      <h1>Sat Emir Nair</h1>
-      <h2>Estudiante de la Tecnicatura Universitaria en Programación</h2>
-      <p>
-        ¡Hola! Soy Emir Sat, un programador apasionado por la tecnología, el diseño web y la creación de experiencias digitales intuitivas y atractivas. Desde que comencé en el mundo del desarrollo, me he enfocado en construir soluciones limpias, funcionales y con una fuerte identidad visual.
-      </p>
-      <div class="redes">
-        <a href="https://www.linkedin.com/in/emir-sat-0a428a363/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <i class="fab fa-linkedin fa-2x"></i>
-        </a>
-        <a href="https://github.com/gordonfreeman2003" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="fab fa-github fa-2x"></i>
-        </a>
+  <!-- NAV -->
+  <nav class="bg-gray-800 p-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-400">Republic Community</h1>
+      <div class="space-x-4">
+        <a href="#sobre" class="hover:text-blue-400">Sobre Nosotros</a>
+        <a href="#discord" class="hover:text-blue-400">Discord</a>
+        <a href="#ip" class="hover:text-blue-400">IP del SV</a>
+        <a href="#addons" class="hover:text-blue-400">Addons</a>
       </div>
-      <a href="./cv/Emir-Sat-CV.pdf" download class="btn-descarga" role="button" aria-label="Descargar CV de Emir Sat">
-        Descargar CV
-      </a>
-    </article>
-    <div class="foto">
-      <img src="./icons/foto.png" alt="Foto de perfil de Emir Sat" loading="lazy" />
     </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="text-center py-20 bg-cover bg-center" style="background-image: url('https://i.imgur.com/B5HQTVG.jpeg');">
+    <h2 class="text-4xl font-bold mb-4 text-white drop-shadow-lg">¡Bienvenido a Republic Community</h2>
+    <p class="text-lg text-gray-200 max-w-2xl mx-auto">Únete a nuestra comunidad inspirada en la mítica serie animada de 2003. Batallas, rol serio, clones, jedis... ¡y mucha acción!</p>
+  </header>
+
+  <!-- SOBRE NOSOTROS -->
+  <section id="sobre" class="py-16 px-6 md:px-20 bg-gray-800">
+    <h3 class="text-3xl font-bold text-blue-400 mb-6">Sobre Nosotros</h3>
+    <p class="text-gray-300 leading-loose">
+      Somos una comunidad apasionada por el universo de Star Wars y especialmente por la estética, el tono y los personajes de la serie Clone Wars 2003. Nuestro servidor se enfoca en ofrecer una experiencia de rol inmersiva con facciones, misiones personalizadas y respeto por el lore.
+    </p>
   </section>
 
-  <!-- Tecnologías -->
-  <main id="main" role="main">
-    <section class="tecnologias" id="tecnologias" aria-label="Tecnologías" data-aos="fade-up">
-      <header class="titulo">
-        <h2>Tecnologías</h2>
-        <p>Lenguajes y herramientas utilizadas</p>
-      </header>
-      <div class="container" role="list" aria-label="Lista de tecnologías">
-        <div class="tarjeta" role="listitem" tabindex="0" title="PseInt - Pseudocódigo para aprender algoritmos">
-          <img src="./icons/pseInt.png" alt="Logo de PseInt" loading="lazy" />
-          <p>PseInt</p>
-        </div>
-        <div class="tarjeta" role="listitem" tabindex="0" title="Java - Lenguaje de programación orientado a objetos">
-          <img src="./icons/java.png" alt="Logo de Java" loading="lazy" />
-          <p>Java</p>
-        </div>
-        <div class="tarjeta" role="listitem" tabindex="0" title="Python - Lenguaje de programación versátil">
-          <img src="./icons/python.png" alt="Logo de Python" loading="lazy" />
-          <p>Python</p>
-        </div>
-        <div class="tarjeta" role="listitem" tabindex="0" title="CSS - Hojas de estilo en cascada">
-          <img src="./icons/css.png" alt="Logo de CSS" loading="lazy" />
-          <p>CSS</p>
-        </div>
-        <div class="tarjeta" role="listitem" tabindex="0" title="HTML - Lenguaje de marcado de hipertexto">
-          <img src="./icons/html.png" alt="Logo de HTML" loading="lazy" />
-          <p>HTML</p>
-        </div>
-        <div class="tarjeta" role="listitem" tabindex="0" title="JavaScript - Lenguaje de programación para web">
-          <img src="./icons/js.png" alt="Logo de JavaScript" loading="lazy" />
-          <p>JavaScript</p>
-        </div>
-        <div class="tarjeta" role="listitem" tabindex="0" title="Git - Control de versiones">
-          <img src="./icons/git.png" alt="Logo de Git" loading="lazy" />
-          <p>Git</p>
-        </div>
-        <div class="tarjeta" role="listitem" tabindex="0" title="AI - Inteligencia Artificial">
-          <img src="./icons/ai.png" alt="Logo de Inteligencia Artificial" loading="lazy" />
-          <p>AI</p>
-        </div>
-      </div>
-    </section>
+  <!-- DISCORD -->
+  <section id="discord" class="py-12 px-6 md:px-20 text-center bg-gray-900">
+    <h3 class="text-2xl font-bold text-blue-400 mb-4">Únete a nuestro Discord</h3>
+    <a href="https://discord.gg/tu-invitacion" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition">Entrar al Discord</a>
+  </section>
 
-    <!-- Proyectos Próximamente -->
-    <section class="proximamente" id="proximamente" aria-label="Próximamente proyectos" data-aos="fade-up">
-      <header class="titulo">
-        <h2>Proyectos</h2>
-        <p>¡Estoy trabajando en nuevos proyectos! Pronto los podrás ver aquí.</p>
-      </header>
-      <div class="container">
-        <p style="text-align:center; font-style: italic; color: var(--text-muted);">Próximamente...</p>
-      </div>
-    </section>
+  <!-- IP DEL SERVIDOR -->
+  <section id="ip" class="py-12 px-6 md:px-20 text-center bg-gray-800">
+    <h3 class="text-2xl font-bold text-blue-400 mb-4">IP del Servidor</h3>
+    <p class="text-xl font-mono bg-gray-700 text-white inline-block px-4 py-2 rounded-lg shadow-lg">192.168.1.100:27015</p>
+    <p class="mt-2 text-gray-400">Copia esta IP y pégala en tu GMod para unirte.</p>
+  </section>
 
-    <!-- Sección de contacto -->
-    <section class="contacto" id="contacto" aria-label="Contacto" data-aos="fade-up">
-      <header class="titulo">
-        <h2>Contacto</h2>
-        <p>¿Te gustó lo que viste? Hablemos. Estoy a un mensaje de distancia.</p>
-      </header>
-      <form class="formulario" id="contactForm" novalidate>
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required aria-required="true" aria-describedby="nombre-error" />
-        <span id="nombre-error" class="error-message" aria-live="polite"></span>
+  <!-- ADDONS -->
+  <section id="addons" class="py-12 px-6 md:px-20 text-center bg-gray-900">
+    <h3 class="text-2xl font-bold text-blue-400 mb-4">Colección de Addons</h3>
+    <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=COLECCION_ID" target="_blank" class="inline-block bg-green-600 hover:bg-green-500 text-white font-semibold py-3 px-6 rounded-xl transition">Ver colección en Steam</a>
+  </section>
 
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-error" />
-        <span id="email-error" class="error-message" aria-live="polite"></span>
-
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="5" required aria-required="true" aria-describedby="mensaje-error"></textarea>
-        <span id="mensaje-error" class="error-message" aria-live="polite"></span>
-
-        <button type="submit" class="btn-descarga">Enviar mensaje</button>
-        <div id="form-status" role="alert" aria-live="polite"></div>
-      </form>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <nav class="social-icons" aria-label="Redes sociales">
-      <a href="https://www.linkedin.com/in/emir-sat-0a428a363/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <img src="./icons/linked-in.png" alt="LinkedIn" loading="lazy" />
-      </a>
-      <a href="https://github.com/gordonfreeman2003" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <img src="./icons/gitithub.png" alt="GitHub" loading="lazy" />
-      </a>
-    </nav>
-    <p>&copy; 2025 - Programador Junior.</p>
+  <!-- FOOTER -->
+  <footer class="bg-gray-800 py-6 mt-10 text-center text-gray-500 text-sm">
+    © 2025 Republic Comunnity 
   </footer>
 
-  <!-- AOS Animation JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-  <script src="script.js" defer></script>
 </body>
 </html>
