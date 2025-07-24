@@ -3,61 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Servidor de rol serio basado en Star Wars: Clone Wars 2003. Clones, Jedis, batallas y mucho más." />
   <title>Republic Community</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="./assets/logo.png" type="image/png" sizes="32x32" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Republic Community - Star Wars Clone Wars RP" />
+  <meta property="og:description" content="Servidor de rol serio basado en Star Wars: Clone Wars 2003. Clones, Jedis, batallas y mucho más." />
+  <meta property="og:image" content="https://i.imgur.com/NVbhqTw.png" />
+  <meta property="og:url" content="https://tusitio.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Republic Community - Star Wars Clone Wars RP" />
+  <meta name="twitter:description" content="Servidor de rol serio basado en Star Wars: Clone Wars 2003. Clones, Jedis, batallas y mucho más." />
+  <meta name="twitter:image" content="https://i.imgur.com/NVbhqTw.png" />
+
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    #ipText {
+      cursor: pointer;
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body id="top" class="bg-gray-900 text-white font-sans">
 
   <!-- NAV -->
-  <nav class="bg-gray-800 p-4 shadow-md">
+  <nav class="bg-gray-800 p-4 shadow-md" role="navigation" aria-label="Menú principal">
     <div class="container mx-auto flex justify-between items-center">
       <h1 class="text-2xl font-bold text-blue-400">Republic Community</h1>
       <div class="space-x-4">
-        <a href="#sobre" class="hover:text-blue-400">Sobre Nosotros</a>
-        <a href="#discord" class="hover:text-blue-400">Discord</a>
-        <a href="#ip" class="hover:text-blue-400">IP del SV</a>
-        <a href="#addons" class="hover:text-blue-400">Addons</a>
+        <a href="#sobre" class="hover:text-blue-400 nav-link">Sobre Nosotros</a>
+        <a href="#discord" class="hover:text-blue-400 nav-link">Discord</a>
+        <a href="#ip" class="hover:text-blue-400 nav-link">IP del SV</a>
+        <a href="#addons" class="hover:text-blue-400 nav-link">Addons</a>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <header class="text-center py-20 bg-cover bg-center" style="background-image: url('https://i.imgur.com/B5HQTVG.jpeg');">
-    <h2 class="text-4xl font-bold mb-4 text-white drop-shadow-lg">¡Bienvenido a Republic Community</h2>
-    <p class="text-lg text-gray-200 max-w-2xl mx-auto">Únete a nuestra comunidad inspirada en la mítica serie animada de 2003. Batallas, rol serio, clones, jedis... ¡y mucha acción!</p>
-  </header>
+  <main>
 
-  <!-- SOBRE NOSOTROS -->
-  <section id="sobre" class="py-16 px-6 md:px-20 bg-gray-800">
-    <h3 class="text-3xl font-bold text-blue-400 mb-6">Sobre Nosotros</h3>
-    <p class="text-gray-300 leading-loose">
-      Somos una comunidad apasionada por el universo de Star Wars y especialmente por la estética, el tono y los personajes de la serie Clone Wars 2003. Nuestro servidor se enfoca en ofrecer una experiencia de rol inmersiva con facciones, misiones personalizadas y respeto por el lore.
-    </p>
-  </section>
+    <!-- HERO -->
+    <header class="relative text-center py-20 bg-cover bg-center" style="background-image: url('https://i.imgur.com/NVbhqTw.png');">
+      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div class="relative z-10 px-4">
+        <h2 class="text-4xl font-bold mb-4 text-white drop-shadow-lg">
+          Bienvenido a Republic Community
+        </h2>
+    </header>
 
-  <!-- DISCORD -->
-  <section id="discord" class="py-12 px-6 md:px-20 text-center bg-gray-900">
-    <h3 class="text-2xl font-bold text-blue-400 mb-4">Únete a nuestro Discord</h3>
-    <a href="https://discord.gg/tu-invitacion" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition">Entrar al Discord</a>
-  </section>
+    <!-- SOBRE NOSOTROS -->
+    <section id="sobre" class="py-16 px-6 md:px-20 bg-gray-800 max-w-screen-lg mx-auto">
+      <h3 class="text-3xl font-bold text-blue-400 mb-6">Sobre Nosotros</h3>
+      <p class="text-gray-300 leading-loose">
+        <strong>Republic Community</strong> es un proyecto de rol serio ambientado en el universo de <strong>Star Wars</strong>, inspirado directamente en la estética, narrativa y tono de la serie animada <em>Clone Wars (2003)</em>. Aspiramos a construir una experiencia inmersiva que represente con fidelidad la crudeza de la guerra de los clones y la jerarquía militar de la República Galáctica.
+        <br><br>
+        Actualmente, nuestro servidor cuenta con una estructura activa y en desarrollo que incluye <strong>Clone Troopers (CT)</strong>, <strong>Advanced Recon Commandos (ARC)</strong>, <strong>Republic Commandos (RC)</strong>, <strong>Armada Republicana</strong> y la <strong>Orden Jedi</strong>. Cada unidad cumple un rol específico dentro del campo de batalla y la narrativa del servidor, promoviendo el trabajo en equipo, la disciplina y el respeto por el lore.
+        <br><br>
+        Nuestra visión es consolidar una comunidad comprometida, donde cada jugador pueda desarrollar su personaje dentro de un entorno serio, estructurado y con un alto estándar de rol militar.
+      </p>
+    </section>
 
-  <!-- IP DEL SERVIDOR -->
-  <section id="ip" class="py-12 px-6 md:px-20 text-center bg-gray-800">
-    <h3 class="text-2xl font-bold text-blue-400 mb-4">IP del Servidor</h3>
-    <p class="text-xl font-mono bg-gray-700 text-white inline-block px-4 py-2 rounded-lg shadow-lg">192.168.1.100:27015</p>
-    <p class="mt-2 text-gray-400">Copia esta IP y pégala en tu GMod para unirte.</p>
-  </section>
+    <!-- DISCORD -->
+    <section id="discord" class="py-12 px-6 md:px-20 text-center bg-gray-900 max-w-screen-lg mx-auto">
+      <h3 class="text-2xl font-bold text-blue-400 mb-4">Únete a nuestro Discord</h3>
+      <a href="https://discord.gg/kRFQ5XeK8J" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition" aria-label="Entrar al Discord en una nueva pestaña">Entrar al Discord</a>
+    </section>
 
-  <!-- ADDONS -->
-  <section id="addons" class="py-12 px-6 md:px-20 text-center bg-gray-900">
-    <h3 class="text-2xl font-bold text-blue-400 mb-4">Colección de Addons</h3>
-    <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=COLECCION_ID" target="_blank" class="inline-block bg-green-600 hover:bg-green-500 text-white font-semibold py-3 px-6 rounded-xl transition">Ver colección en Steam</a>
-  </section>
+    <!-- IP DEL SERVIDOR -->
+    <section id="ip" class="py-12 px-6 md:px-20 text-center bg-gray-800 max-w-screen-lg mx-auto">
+      <h3 class="text-2xl font-bold text-blue-400 mb-4">IP del Servidor</h3>
+      <div class="inline-flex items-center justify-center">
+        <p id="ipText" class="text-xl font-mono bg-gray-700 text-white inline-block px-4 py-2 rounded-lg shadow-lg select-all" title="Haz clic para copiar la IP">192.168.1.100:27015</p>
+        <button onclick="copyIP()" class="ml-2 bg-blue-600 hover:bg-blue-500 text-white py-2 px-4 rounded" aria-label="Copiar IP al portapapeles">Copiar IP</button>
+      </div>
+      <p class="mt-2 text-gray-400">Copia esta IP y pégala en tu GMod para unirte.</p>
+    </section>
+
+    <!-- ADDONS -->
+    <section id="addons" class="py-12 px-6 md:px-20 text-center bg-gray-900 max-w-screen-lg mx-auto">
+      <h3 class="text-2xl font-bold text-blue-400 mb-4">Colección de Addons</h3>
+      <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3528455863" target="_blank" rel="noopener noreferrer" class="inline-block bg-green-600 hover:bg-green-500 text-white font-semibold py-3 px-6 rounded-xl transition" aria-label="Ver colección de addons en Steam en una nueva pestaña">Coleccion Principal</a>
+      <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3528457757" target="_blank" rel="noopener noreferrer" class="inline-block bg-green-600 hover:bg-green-500 text-white font-semibold py-3 px-6 rounded-xl transition" aria-label="Ver colección de addons en Steam en una nueva pestaña">Coleccion Mapas</a>
+    </section>
+
+  </main>
 
   <!-- FOOTER -->
-  <footer class="bg-gray-800 py-6 mt-10 text-center text-gray-500 text-sm">
-    © 2025 Republic Comunnity 
+  <footer class="bg-gray-800 py-6 mt-10 text-center text-gray-500 text-sm" role="contentinfo">
+    © Republic Community
   </footer>
+
+  <script>
+    function copyIP() {
+      const ip = document.getElementById('ipText').textContent;
+      navigator.clipboard.writeText(ip).then(() => {
+        alert('IP copiada al portapapeles');
+      }).catch(() => {
+        alert('Error al copiar la IP');
+      });
+    }
+
+    const sections = document.querySelectorAll('main section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 80;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('text-blue-400');
+        if (link.getAttribute('href').substring(1) === current) {
+          link.classList.add('text-blue-400');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
